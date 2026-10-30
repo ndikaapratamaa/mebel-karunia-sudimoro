@@ -1,15 +1,3 @@
-/**
- * Konten homepage yang diisi bertahap. Biarkan array kosong bila belum ada;
- * homepage otomatis menampilkan keterangan "sedang disiapkan".
- * Isi hanya dengan data asli. Entri contoh di bawah wajib diganti sebelum website dipublikasikan.
- * `image`: path foto di folder /public (misalnya "/portofolio/ruang-tamu.jpg"). Kosong = kartu tanpa foto.
- */
-
-/**
- * `place` = keterangan di bawah nama, misalnya produk dan kota.
- * Tanpa `text`, kartu tampil sebagai kerangka kosong (garis abu-abu pengganti teks); `name` diabaikan.
- * Untuk ulasan asli, isi `name` dan `text`; `rating` (1-5) dan `photo` hanya tampil bila diisi.
- */
 export type Testimonial = {
   name: string;
   text?: string;
@@ -19,11 +7,6 @@ export type Testimonial = {
 };
 
 export type Room = { slug: string; title: string; text: string; href: string; image?: string };
-
-/**
- * Pintu masuk berdasarkan ruangan di homepage. Isi `image` dengan foto tegak (rasio 4:5) dari /public,
- * misalnya "/ruangan/ruang-tamu.jpg". Selama kosong, blok foto tampil sebagai blok netral.
- */
 export const rooms: Room[] = [
   { slug: "mebel-interior", title: "Mebel & Interior", text: "Kursi, meja, lemari, dipan.", href: "/produk", image: "/foto-lemari/lemari-2-pintu-ukir-daun-01.jpg" },
   { slug: "kusen-pintu", title: "Kusen & Pintu", text: "Pintu, jendela, dan kusen.", href: "/produk", image: "/foto-pintu/pintu-2-daun-kaca-panel-01.jpg" },
@@ -32,30 +15,10 @@ export const rooms: Room[] = [
   { slug: "custom-desain", title: "Custom Desain", text: "Ukuran dan model khusus.", href: "/kontak", image: "/foto-galeri/pengerjaan-meja-ukir-bangku-kayu-01.jpg" },
 ];
 
-/** Foto (rasio 4:3) untuk bagian Cerita Kami, misalnya "/cerita.jpg" di folder /public. Kosong = blok netral. */
+
 export const storyImage: string | undefined = "/foto-cerita.jpg";
-
-/*
- * Tiga proyek di bawah adalah DATA CONTOH untuk tata letak (bukan karya atau pelanggan nyata).
- * Selama `business.showSampleBadge` aktif, kartu diberi label "Contoh proyek".
- * Ganti dengan proyek asli, atau kosongkan array agar tampil keterangan "sedang disiapkan".
- */
-
-
-/*
- * Tiga kartu di bawah adalah KERANGKA KOSONG untuk tata letak (belum ada ulasan nyata).
- * Ganti dengan ulasan asli (dengan izin pelanggan) sebelum website dipublikasikan,
- * atau kosongkan array agar tampil keterangan "belum tersedia".
- */
 export const testimonials: Testimonial[] = [{ name: "" }, { name: "" }, { name: "" }];
-
 export type Faq = { question: string; answer: string };
-
-/*
- * TODO: konfirmasi semua jawaban dengan pemilik usaha sebelum website dipublikasikan, terutama
- * estimasi waktu pembuatan, metode pembayaran, pengiriman dan asuransi, jenis kayu, garansi (1-3 tahun, anti-rayap),
- * serta hari dan jam buka workshop.
- */
 export const faqs: Faq[] = [
   {
     question: "Berapa lama proses pembuatan custom mebel?",
