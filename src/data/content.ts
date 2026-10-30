@@ -15,9 +15,27 @@ export const rooms: Room[] = [
   { slug: "custom-desain", title: "Custom Desain", text: "Ukuran dan model khusus.", href: "/kontak", image: "/foto-galeri/pengerjaan-meja-ukir-bangku-kayu-01.jpg" },
 ];
 
-
 export const storyImage: string | undefined = "/foto-cerita.jpg";
+
+/** Foto unggulan di banner promo (rasio 4:3). Kosong = kotak abu-abu netral. */
+export const promoImage: string | undefined = "/foto-kursi/kursi-tamu-set-ukir-emas-02.jpg";
+
 export const testimonials: Testimonial[] = [{ name: "" }, { name: "" }, { name: "" }];
+
+/**
+ * KERANGKA SEMENTARA: isi artikel asli Anda tidak ada di file ini.
+ * Kembalikan dari git/backup, atau kirim halaman artikelnya agar tipe dan datanya disamakan.
+ */
+export type Article = {
+  slug: string;
+  title: string;
+  excerpt?: string;
+  date?: string;
+  image?: string;
+  body?: string[];
+};
+export const articles: Article[] = [];
+
 export type Faq = { question: string; answer: string };
 export const faqs: Faq[] = [
   {
