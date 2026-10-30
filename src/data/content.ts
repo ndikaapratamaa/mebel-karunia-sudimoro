@@ -17,11 +17,10 @@ export const rooms: Room[] = [
 
 export const storyImage: string | undefined = "/foto-cerita.jpg";
 
-
+/** Foto unggulan di banner promo (rasio 4:3). Kosong = kotak abu-abu netral. */
 export const promoImage: string | undefined = "/foto-kursi/kursi-tamu-set-ukir-emas-02.jpg";
 
 export const testimonials: Testimonial[] = [{ name: "" }, { name: "" }, { name: "" }];
-
 
 export type Article = {
   slug: string;
@@ -30,8 +29,25 @@ export type Article = {
   date?: string;
   image?: string;
   body?: string[];
+  /** Tujuan kartu. Kosong = pakai `fallbackHref` di ArticleGrid (bila ada). */
+  href?: string;
+  /** Label kategori kecil di atas judul. */
+  tag?: string;
 };
 export const articles: Article[] = [];
+
+export type PortfolioItem = {
+  slug: string;
+  title: string;
+  description?: string;
+  image?: string;
+  /** Kosong = tombol mengarah ke WhatsApp dengan pesan otomatis. */
+  href?: string;
+};
+export const portfolioItems: PortfolioItem[] = [];
+
+/** Foto di bagian "Layanan custom" (rasio 4:5). Kosong = kotak abu-abu netral. */
+export const customServiceImage: string | undefined = "/foto-galeri/pekerja-mengolah-kayu-bengkel-01.jpg";
 
 export type Faq = { question: string; answer: string };
 export const faqs: Faq[] = [
