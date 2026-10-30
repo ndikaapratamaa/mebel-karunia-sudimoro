@@ -4,13 +4,14 @@ import type { ReactNode } from "react";
 type Props = {
   href: string;
   children: ReactNode;
-  variant?: "solid" | "outline";
+  variant?: "solid" | "outline" | "light";
   className?: string;
 };
 
 const styles = {
   solid: "bg-tinta text-putih hover:bg-stone-800 hover:shadow-lg",
   outline: "border border-tinta/40 text-tinta hover:border-tinta hover:bg-tinta hover:text-putih",
+  light: "bg-putih text-tinta hover:bg-abu hover:shadow-lg",
 };
 
 /** Tautan bergaya tombol. Tautan eksternal (WhatsApp) dibuka di tab baru. */
